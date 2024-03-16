@@ -1,0 +1,8 @@
+.taskList {
+  transition: all 2.7s;
+}
+
+.taskList.hideList {
+  height: 0px;
+  transition: all 1.7s;
+}
