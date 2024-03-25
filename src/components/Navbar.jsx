@@ -19,7 +19,7 @@ const Navbar = () => {
         <a className=" text-5xl tracking-wide font-extrabold  py-5">POMODORO</a>
       </div>
       <div className="navbar-end">
-        <button className=" btn bg-neutral px-6">
+        <button className=" hidden lg:block btn bg-neutral px-6 ">
           <LuListTodo onClick={toggleList} className="w-5 h-5"></LuListTodo>
         </button>
       </div>
@@ -28,8 +28,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-{
-  /* <div className="flex  py-5 bg-brown items-center tracking-wide justify-center text-5xl font-bold">
-          POMODORO
-        </div> */
-}

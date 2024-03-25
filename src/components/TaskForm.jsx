@@ -15,10 +15,7 @@ const TaskForm = () => {
     }
   };
   return (
-    <div
-      id="taskList"
-      className=" taskList hideList absolute top-28 right-0 pt-5 overflow-hidden w-max h-full"
-    >
+    <div>
       <div className="menu rounded-xl bg-brown p-4  mr-2 text-base-content">
         <form onSubmit={addTask}>
           <label className="input input-bordered flex items-center gap-2">

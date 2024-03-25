@@ -38,7 +38,7 @@ const TaskListItem = ({ item }) => {
       <form className="flex gap-3 justify-between" onSubmit={handleSubmit}>
         <input
           type="checkbox"
-          onClick={handleChecked}
+          onChange={handleChecked}
           checked={checked}
           className="checkbox"
         />
