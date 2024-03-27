@@ -6,10 +6,11 @@ import {
   DesktopTaskList,
   MobileTaskList,
 } from "./components";
+import tomatoimg from "./images/tomato.jpeg";
 
 function App() {
   return (
-    <div className="h-screen bg-[url(tomato.jpeg)] bg-center bg-cover bg-no-repeat ">
+    <div className="h-screen bg-[url(/tomato.jpeg)] bg-center bg-cover bg-no-repeat ">
       <div className="h-screen bg-brown">
         <Navbar></Navbar>
         <DesktopTaskList></DesktopTaskList>
