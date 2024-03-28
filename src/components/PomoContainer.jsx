@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import useTimer from "../hooks/useTimer";
-
+import timerAudio from "../assets/sounds/timesUp.mp3";
 const status = {
   STARTED: "started",
   STOPPED: "stopped",
@@ -10,8 +10,14 @@ const status = {
 };
 
 const PomoContainer = () => {
+  var audio = new Audio(timerAudio);
+
+  const onTimerEnd = () => {
+    console.log("timer ended");
+    audio.play();
+  };
   const { startTimer, stopTimer, pauseTimer, resumeTimer, minutes, seconds } =
-    useTimer();
+    useTimer(onTimerEnd);
   const [timerStatus, setTimerStatus] = React.useState(status.STOPPED);
 
   React.useEffect(() => {

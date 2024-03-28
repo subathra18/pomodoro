@@ -2,7 +2,7 @@ import React from "react";
 import { DEFAULT_TIMER, MINUTES_TO_MILLISECONDS } from "../utils/constants";
 const DELAY = 1000;
 
-const useTimer = () => {
+const useTimer = (onTimerEnd) => {
   let timerID = React.useRef();
   const [minutes, setMinutes] = React.useState(DEFAULT_TIMER);
   const [seconds, setSeconds] = React.useState(0);
@@ -11,6 +11,7 @@ const useTimer = () => {
     //when the timer is finished running
     if (minutes == 0 && seconds == 0) {
       clearTimer();
+      onTimerEnd();
     }
   });
 
